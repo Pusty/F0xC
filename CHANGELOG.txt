@@ -1,0 +1,92 @@
+Changelog
+
+25.10.16:
+	Added:
+	Added support for int (COMPILER,PSEUDO,REAL,CLINIT)
+	Added support for static int arrays (COMPILER,CLINIT)
+	Added support for if, for and while with ints in them (COMPILER,PSEUDO,REAL)
+	Added support for a interface ASMxJava (COMPILER,PSEUDO)
+	Added auto import for interface functions (REAL)
+	Added support for calls (REAL)
+	Added ORG header and 512ifier (REAL)
+	Note:
+	ASMxJava Functions may do unexpected things
+26.10.16:
+	Added:
+	Added support for static long variables (CLINIT)
+	Added support for Long Statics (PSEUDO,REAL)
+	Added support for 0L and 1L (COMPILER)
+	Added support for storing and loading longs (COMPILER,PSEUDO,REAL)
+	Now throws Errors when Unknown things appear (COMPILER,PSEUDO,REAL)
+	Added support for byte and boolean (COMPILER,PSEUDO,REAL,CLINIT)
+	Added Integer Negation (COMPILER,PSEUDO,REAL,CLINIT)
+	Needs:
+	Need support for long math operations
+	Needs support for longs outside of 0 and 1
+	Needs store array for long variables that's only there if longs are used
+	Note:
+	Just don't use longs... LONGS ARE BAD!
+29.10.16:
+	Added:
+	while(true) (CODE)
+	Support for numbers greater than 255 (REAL)
+	moves includes to the include file and now creates the "temp" dir for kernel creation
+	Fixed load and store bugs and made stack size dependent on code
+	Added support for char (COMPILER,PSEUDO,REAL,CLINIT)
+	Implemented better import system (INCLUDER)
+	Added Support for non returning no arguments static functions (COMPILER)
+	Added Support for Loading incbin types [Image16,Pal16,...] (COMPILER,CLINIT)
+	Added more functions (e.g. buffer.asm, util stuff)
+30.10.16:
+	Added Support for returning functions
+	Added Support for functions with arguments
+	Added a Pointer Class which handles Pointers to not simple types [Objects,Arrays,...]
+	Added support for working with int arrays which are static declared
+	Added support for listener and other ImplClasses
+03.11.16:
+	Made Real more efficient
+	Added private folder
+05.11.16:
+	Made private more dynamic
+	Added Cutter to shorten code length
+06.11.16:
+	Added arraylengths
+	Added the Storable format
+	Fixed arraycreation bug in CLINIT
+	added for(Object:Object[])
+	Added RegSize to change size of BYTE,INT,LONG or MEM (not fully implemented yet)
+	Added support for long within long range
+	Added support for long math operations
+	Changed function structure
+	Made Interrupt.class a complete mask class
+	Added support for classes extending from Interrupt to write own mask classes
+	Real write function now supports changed RegSizes without destroying certain variables
+12.11.16:
+	Fixed that you have to declare variables
+	Added support for final variables
+	Fixed a bug that made outputs not possible
+	Fixed a bug where bytes got pushed and poped (which is not possible)
+	Made working with byte sizes actually possible by working with word registers (which cost more memory for functions)
+	Implemented int to long conversion
+	Added pow8 and pow16
+	Added lengthInt and printInt
+	Split Interrupt into B16 and B8 (variable size 16bit or 8bit)
+	ToDo:
+	Optimize Cutter
+	Rework CLINIT
+	Needs Bitwise operators (this is a java to 8bit compiler without bitwise operations lol)
+	Rework getKey as the Listener doesn't work on real systems (blame Alex)
+13.11.16:
+	Added Debug features to Cutter for b8 push and pops
+	Corrected int to long convertion
+	Replaced function names with labels
+	ToDO:
+	Implement Class Loading of external Classes
+08.01.17:
+	Added Unefficient TileMap for Map Loading
+	Added the option for function to get named after their real name
+	Added the option to trigger a function onKey in KernelKey
+	Added a Null class to null initiate things. (which makes them JavaCodeOnly Object as they won't get translated)
+	Fixed a bug which prevented assembler functions to return data
+...
+	Other Stuff
